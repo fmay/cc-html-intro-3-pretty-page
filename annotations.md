@@ -291,7 +291,9 @@ The styling options are self-explanatory by now. Remember that the <h1> and <p> 
 #Summing Up
 A usual, the name of the game is experimentation. You should mess around with code freely. If you mess things up, select 'Restore' from the Rocket menu at the top.
 
+You should now be in a position to create strong page layouts. More imortantly, you should be at the stage where you are able to use Google to add to your knowledge. This is the way that all developer, including the most battle hardened pros, do things.
 
+It's now time to find out about Javascript in the next course!
 
 
 

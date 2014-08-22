@@ -3,7 +3,7 @@
 
 // Run button configuration
   "commands": {
-		"Starting Out": "~/workspace/.guides/restore.sh"
+		"Restore": "~/workspace/.guides/restore.sh"
   },
 
 // Preview button configuration

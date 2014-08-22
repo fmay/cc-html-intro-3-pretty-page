@@ -11,7 +11,7 @@ echo -e "${red}Restoring your workspace${NC}"
 
 # Remove the entire contents of the root folder
 rm ~/workspace/* 2>/dev/null
-rm ~/workspace/css 2>/dev/null
+rm -rf ~/workspace/css 2>/dev/null
 
 # Copy the example folder to the root
 cp -r ~/workspace/.guides/stages/* ~/workspace
