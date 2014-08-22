@@ -1,0 +1,58 @@
+/*
+    Document   : css/classical.css
+    Created on : 2014-08-22 11:56 AM
+    Author     : fmay
+    Description: Classical page styling
+
+*/
+
+video {
+  width: 100%;
+  height: auto;
+}
+
+/* ROW 1 */
+
+#r1c1 {
+  margin-right: 2px;
+  width: 530px;
+  height: 300px;
+  background: #fff url('/img/monk.jpg') -75px 0;
+}
+
+
+#r1c2 {
+  margin-left:16px;
+  width: 349px;
+  height: 300px;
+  background-image: url('/img/duke.jpg');
+  background-size: cover;
+}
+
+/* ROW 2 */
+
+#r2c1 {
+  width: 280px;
+  height: 300px;
+  background-image: url('/img/wynton.jpg');
+  background-size: cover;
+}
+
+#r2c2 {
+  margin-left:16px;
+  width: 280px;
+  height: 300px;
+  background-image: url('/img/dave.jpg');
+  background-size: cover;
+}
+
+#r2c3 {
+  margin-left:16px;
+  width: 280px;
+  height: 300px;
+  background-image: url('/img/louis.jpeg');
+  background-size: cover;
+}
+
+
+
