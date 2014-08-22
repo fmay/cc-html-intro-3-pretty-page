@@ -1,300 +1,138 @@
 /*
- * HTML5 Boilerplate
- *
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-
-html,
-button,
-input,
-select,
-textarea {
-    color: #222;
-}
+    Document   : css/main．css
+    Created on : 2014-08-21 06:15 PM
+    Author     : fmay
+    Description: Codio module
+*/
 
 body {
-    font-size: 1em;
-    line-height: 1.4;
+  background-color: #ededed;
+  margin: 0;
+  padding:0;
+  color: #fff;
+  font-family: Verdana;  
 }
 
-/*
- * Remove text-shadow in selection highlight: h5bp.com/i
- * These selection declarations have to be separate.
- * Customize the background color to match your design.
- */
-
-::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
+.title {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  margin: 0;
+  font-size: 50px;
+  font-weight: bold;
+  transform: uppercase;
+  color: rgb(255, 255, 255);
 }
 
-::selection {
-    background: #b3d4fc;
-    text-shadow: none;
+.title span {
+  color: #FC7C7C;
 }
 
-/*
- * A better looking default horizontal rule
- */
+nav {
+  position: relative;
+  bottom: 64px;
+  margin-bottom: -39px;
+  width: 100%;
+  height: 64px;
+  color: #fff;
+  font-size: 32px;
+  background: rgba(2, 2, 2, 0.55);
+  text-align: center;
 
-hr {
+}
+
+ul {
+  display: inline-block;
+  vertical-align: middle;
+  list-style-type: none;
+  margin-top: 8px;
+}
+
+li {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #888888;
+  margin-left: -12px;
+  border-width: 1px;
+  border-color: rgb(160, 160, 160);
+  border-style: solid;
+  font-size: 18px;
+}
+
+li a, li a:visited {
+  display: block;
+  padding: 10px 80px 10px 0px;
+  width:100%;
+  height:100%;  
+  text-decoration: none;
+  color: #888888;
+}
+
+#jazz {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+#tonight {
+  border-top-right-radius: 3px;  
+  border-bottom-right-radius: 3px; 
+  background-color: #ff5a5f;
+  border-width: 1px;
+  border-color: rgb(160, 160, 160);  
+  color: #fff;
+}
+
+#tonight a, #tonight a:visited {
+  color: #fff;  
+} 
+
+#content {
+  width: 950px;
+  margin: auto;
+  text-align: center;
+}
+
+.top-title {
+  color: #7a7a7a;
+  font-size: 40px;
+  font-weight: bold;
+  margin: 5px 0 0 5px;  
+}
+
+.top-subtitle {
+  color: #7f7f7f;
+  font-size: 14px;
+  margin: 5px 0 25px 0;  
+}
+
+.desc-hdr {
+  text-transform: uppercase;
+  font-size: 24px;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.desc-text {
+  text-transform: uppercase;
+  line-height: 1.2em;
+  margin-top: -15px;
+  text-align: left;
+}
+
+.tile-row {
+  margin-bottom: 23px;
+}
+
+.tile {
+  display: inline-block;
+  vertical-align: top;  
+  padding: 10px;   
+}
+
+div.tile a {
     display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
-
-/*
- * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
- */
-
-img {
-    vertical-align: middle;
-}
-
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
-
-/*
- * Allow only vertical resizing of textareas.
- */
-
-textarea {
-    resize: vertical;
-}
-
-/* ==========================================================================
-   Chrome Frame prompt
-   ========================================================================== */
-
-.chromeframe {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
-
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Image replacement
- */
-
-.ir {
-    background-color: transparent;
-    border: 0;
-    overflow: hidden;
-    /* IE 6/7 fallback */
-    *text-indent: -9999px;
-}
-
-.ir:before {
-    content: "";
-    display: block;
-    width: 0;
-    height: 150%;
-}
-
-/*
- * Hide from both screenreaders and browsers: h5bp.com/u
- */
-
-.hidden {
-    display: none !important;
-    visibility: hidden;
-}
-
-/*
- * Hide only visually, but have it available for screenreaders: h5bp.com/v
- */
-
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-
-/*
- * Extends the .visuallyhidden class to allow the element to be focusable
- * when navigated to via the keyboard: h5bp.com/p
- */
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
-
-/*
- * Hide visually and from screenreaders, but maintain layout
- */
-
-.invisible {
-    visibility: hidden;
-}
-
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-
-.clearfix:before,
-.clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
-
-.clearfix:after {
-    clear: both;
-}
-
-/*
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-
-.clearfix {
-    *zoom: 1;
-}
-
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   Theses examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
-}
-
-@media print,
-       (-o-min-device-pixel-ratio: 5/4),
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
-}
-
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid required HTTP connection: h5bp.com/r
-   ========================================================================== */
-
-@media print {
-    * {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster: h5bp.com/s */
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-
-    /*
-     * Don't show links for images, or javascript/internal links
-     */
-
-    .ir a:after,
-    a[href^="javascript:"]:after,
-    a[href^="#"]:after {
-        content: "";
-    }
-
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    thead {
-        display: table-header-group; /* h5bp.com/t */
-    }
-
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    img {
-        max-width: 100% !important;
-    }
-
-    @page {
-        margin: 0.5cm;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
+    width:100%;
+    height:100%;
+    color: #fff;
+    text-decoration:none;
 }

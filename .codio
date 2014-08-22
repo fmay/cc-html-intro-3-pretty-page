@@ -1,0 +1,13 @@
+{
+// Configure your Run and Preview buttons here.
+
+// Run button configuration
+  "commands": {
+        "Restore": "node --version"
+  },
+
+// Preview button configuration
+  "preview": {
+        "Preview": "https://{{domain}}/{{index}}"   
+  }
+}
