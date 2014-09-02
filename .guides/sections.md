@@ -1,26 +1,52 @@
-@annotation:tour intro
+---
+title: A Pretty Site
+files: []
+editable: true
+layout: 2-panels-tree
+
+---
 #A Pretty Site
 This module builds on the materials we learnt in the 'My First Web Page' and 'More Advanced Layouts' modules.
 
 This is less of a teaching module and more a case of looking a pre-built site and seeing how it was built.
 
-![](.guides/an-img/site-ss.jpg)
+![](.guides/img/site-ss.jpg)
 
 There are many different ways that this site could have been built and this example is one approach.
+---
+title: Overview of the site
+files: []
+editable: true
+layout: ""
 
-@annotation:tour overview
+---
 #Overview of the site
 The site consists of 3 pages
 
 - Jazz : this is the main `index.html` page
 - Classical : this is `classical.html` and the header section is built to completion but the tiles underneath have the same tiles as the Jazz page, so feel free to put in classical tiles
 - Rock : this page has not actually been built yet and is one you can add yourself by adding a `rock.html` page
+---
+title: HTML Files
+files: []
+editable: true
+layout: ""
 
-@annotation:tour HTMLfiles
+---
 ##HTML Files
 We are using one file for each of the 3 pages. `index.html` and `classical.html` are already there and you can feel free to add a `rock.html` files and build the missing page.
 
-@annotation:tour CSSFiles
+---
+title: CSS Files
+files:
+  - path: index.html
+    panel: 0
+    ref: ""
+    lineCount: 0
+editable: true
+layout: ""
+
+---
 ##CSS Files
 You will see that there is a folder called `css` in your filetree. For this project we decided to use more than one CSS file. We could have slapped everything into `main.css` but this makes for a large file that is tedious to scroll through.
 
@@ -28,7 +54,7 @@ We opted to do the following for this project :
 
 - `main.css` should contain styling that is common to all pages
 - `jazz.css` contains styling specific just to the Jazz page (the tiles)
-- `'classical.css` contains styling for th Classical tiles
+- `classical.css` contains styling for the Classical tiles
 - `rock.css` well, this doesn't exist yet but you can go ahead and create it and link it into your new `rock.html` page.rock
 
 ##Linking the CSS pages
@@ -41,8 +67,13 @@ If you look at the top of `index.html` (you'll see the same sort of thing in `cl
   <link rel="stylesheet" type="text/css" href="/css/jazz.css">   
 </head>
 ```
+---
+title: The Video
+files: []
+editable: false
+layout: ""
 
-@annotation:tour video
+---
 #The Video
 Setting up the video is actually really easy. We have used an mp4 video file that lives on a Codio server. You have better control over these compared to YouTube. 
 
@@ -54,7 +85,17 @@ If you wanted to use YouTube, then you can get HTML 'embed' code that you can pa
 <video src="https://codio.com/s/img/videos/jazz.mp4" loop autoplay>
 ```
 
-@annotation:tour menu
+---
+title: The Menu
+files:
+  - path: css/main.css
+    panel: 0
+    ref: ""
+    lineCount: 0
+editable: false
+layout: ""
+
+---
 #The Menu
 We have created a nice and simple menu using <li> elements with some clever styling.
 
@@ -117,11 +158,11 @@ li a, li a:visited {
 }
 ```
 
-This is perhaps the toughest part to explain. `li a` addresses how to style the <a> tag within an <li> element. This means how the link itself should appear. The `li a:visited` selector styles links that have already been clicked on/visited (we don't want them to appear in the default blue). `text-decoration: none` means that links and visisted links should not be underlined (which is the default behavior for links).
+This is perhaps the toughest part to explain. `li a` addresses how to style the <a> tag within an <li> element. This means how the link itself should appear. The `li a:visited` selector styles links that have already been clicked on/visited (we don't want them to appear in the default blue). `text-decoration: none` means that links and visited links should not be underlined (which is the default behavior for links).
 
 Now the challenging bit is to explain why we are using `display: block` and `width:100%` and `height:100%`. The reason for this is that we do not want only the text to be a link that changes the mouse cursor when you hover over it, but we want the entire area around it to be clickable as well.
 
-`display: block` tells the browser to treat it as a block element rather than an inline element. Setting the width and height to 100% sets the element to be the full size of its parent container (the <li> element). We have to fiddle around with the padding in order to get it to appear just right.display
+`display: block` tells the browser to treat it as a block element rather than an inline element. Setting the width and height to 100% sets the element to be the full size of its parent container (the <li> element). We have to fiddle around with the padding in order to get it to appear just right.
 
 It is important you play with these value and preview in order to see just what effect each property has on the output, so go play!
 
@@ -151,11 +192,17 @@ If you look at the Jazz and Tonight menu items, you can see that they actually r
 
 Text has a different styling when a) displayed b) linked and c) linked and the user has visited that link before. 
 
-Even thought we styled the Tonight menu with `color: #fff;` (white), the menu item has a link on it and so the `li a` and `li a:visited` selectors overide things, meaning it will get the same light gray color.
+Even thought we styled the Tonight menu with `color: #fff;` (white), the menu item has a link on it and so the `li a` and `li a:visited` selectors override things, meaning it will get the same light gray color.
 
 We need this text to be white, to we have to specifically set the `li a` and `li a:visited` properties .
 
-@annotation:tour titletext
+---
+title: Title text above the tiles
+files: []
+editable: false
+layout: ""
+
+---
 #Title text above the tiles
 The styling of these is pretty self explanatory.
 
@@ -187,10 +234,15 @@ One thing that is worth expanding on is the way that we get this text to center 
 One thing to note about `text-align: center` is that because styles *cascade* to child elements, all the text in the musician tiles would also be centered. We will deal with this by specifically setting the alignment back to left for these tiles, as we discuss in the next section.
 
 Note that the `margin: auto` property tells the browser that the <content> container (which we have set to be 950px wide) should be centered with respect to its parent (which is the page).
+---
+title: Musician Tiles
+files: []
+editable: false
+layout: ""
 
-@annotation:tour tiles
+---
 #Musician Tiles
-The individual tiles are actually styled within their respective css files (`jazz.css` etc.) but there are things that are common to each and every tile is all pages. 
+The individual tiles are actually styled within their respective css files (`jazz.css` etc.) but there are things that are common to each and every tile on all pages. 
 
 For example, the musician name and the subtext is the same. So rather than duplicate this in all individual css files, we put the styling for these in `main.css`. It's much neater that way.
 
@@ -223,7 +275,7 @@ Our HTML contains class references to the above selectors
 
 You can see how the <h1> and <p> tags have these class references in them.
 
-The actual styling is pretty self-explanatory. Note how the `text-transform: uppercase' converts the original text into upper case for us.
+The actual styling is pretty self-explanatory. Note how the `text-transform: uppercase` converts the original text into upper case for us.
 
 ##Tile Rows
 We also can centrally style some of the block level properties of our tiles. 
@@ -252,11 +304,20 @@ div.tile a {
 }
 ```
 
-The above styling is also very interesting. It is doing the exact same thing as we did with the menu items. We don't want only the text to be clickable, we want the *entire parent container* (the <div> to be clickable).
+The above styling is also very interesting. It is doing the exact same thing as we did with the menu items. We don't want only the text to be clickable, we want the *entire parent container* (the <div>) to be clickable.
 
 It is the combination of `display: block`, `width:100%` and `height: 100%` that does this. It tells the browser to treat the <a> tag (from `div.tile a`) like a block. Setting the width and height to 100% means the block will fill the parent (the <div>).
+---
+title: Individual Tiles
+files:
+  - path: css/jazz.css
+    panel: 0
+    ref: ""
+    lineCount: 0
+editable: true
+layout: 2-panels-tree
 
-@annotation:tour rowcol
+---
 #Individual Tiles
 Finally, we have styled each individual tile so each one can have a unique size and appearance.
 
@@ -283,24 +344,20 @@ The HTML and CSS look like this
 }
 ```
 
-Because each tile we want to style uniquely, we use and id, so `id='r2c2'`.
+Because each tile we want to style uniquely, we use an id, so `id='r2c2'`.
 
 The styling options are self-explanatory by now. Remember that the <h1> and <p> tags are styled in `main.css` as these are common to all tiles on all pages.
 
-@annotation:tour summary
-#Summing Up
-A usual, the name of the game is experimentation. You should mess around with code freely. If you mess things up, select 'Restore' from the Rocket menu at the top.
+---
+title: Summing Up
+files: []
+editable: false
+layout: ""
 
-You should now be in a position to create strong page layouts. More imortantly, you should be at the stage where you are able to use Google to add to your knowledge. This is the way that all developer, including the most battle hardened pros, do things.
+---
+#Summing Up
+A usual, the name of the game is experimentation. You should mess around with code freely. If you mess things up, select 'Restore' from the ![](.guides/img/rocket.png) Rocket menu at the top.
+
+You should now be in a position to create strong page layouts. More importantly, you should be at the stage where you are able to use Google to add to your knowledge. This is the way that all developers, including the most battle hardened pros, do things.
 
 It's now time to find out about Javascript in the next course!
-
-
-
-
-
-
-
-
-
-
