@@ -5,7 +5,6 @@ editable: true
 layout: 2-panels-tree
 
 ---
-#A Pretty Site
 This module builds on the materials we learnt in the 'My First Web Page' and 'More Advanced Layouts' modules.
 
 This is less of a teaching module and more a case of looking a pre-built site and seeing how it was built.
@@ -20,7 +19,6 @@ editable: true
 layout: ""
 
 ---
-#Overview of the site
 The site consists of 3 pages
 
 - Jazz : this is the main `index.html` page
@@ -33,7 +31,6 @@ editable: true
 layout: ""
 
 ---
-##HTML Files
 We are using one file for each of the 3 pages. `index.html` and `classical.html` are already there and you can feel free to add a `rock.html` files and build the missing page.
 
 ---
@@ -47,7 +44,6 @@ editable: true
 layout: ""
 
 ---
-##CSS Files
 You will see that there is a folder called `css` in your filetree. For this project we decided to use more than one CSS file. We could have slapped everything into `main.css` but this makes for a large file that is tedious to scroll through.
 
 We opted to do the following for this project :
@@ -74,7 +70,6 @@ editable: false
 layout: ""
 
 ---
-#The Video
 Setting up the video is actually really easy. We have used an mp4 video file that lives on a Codio server. You have better control over these compared to YouTube. 
 
 If you [check this article out](https://developer.mozilla.org/en/docs/Web/HTML/Element/video) you can see how you can add player controls and many more things. 
@@ -96,7 +91,6 @@ editable: false
 layout: ""
 
 ---
-#The Menu
 We have created a nice and simple menu using <li> elements with some clever styling.
 
 This is the HTML
@@ -203,7 +197,6 @@ editable: false
 layout: ""
 
 ---
-#Title text above the tiles
 The styling of these is pretty self explanatory.
 
 ```
@@ -241,7 +234,6 @@ editable: false
 layout: ""
 
 ---
-#Musician Tiles
 The individual tiles are actually styled within their respective css files (`jazz.css` etc.) but there are things that are common to each and every tile on all pages. 
 
 For example, the musician name and the subtext is the same. So rather than duplicate this in all individual css files, we put the styling for these in `main.css`. It's much neater that way.
@@ -318,7 +310,6 @@ editable: true
 layout: 2-panels-tree
 
 ---
-#Individual Tiles
 Finally, we have styled each individual tile so each one can have a unique size and appearance.
 
 Note that we have a separate CSS file for each music genre in the css folder in our filetree.
@@ -355,7 +346,6 @@ editable: false
 layout: ""
 
 ---
-#Summing Up
 A usual, the name of the game is experimentation. You should mess around with code freely. If you mess things up, select 'Restore' from the ![](.guides/img/rocket.png) Rocket menu at the top.
 
 You should now be in a position to create strong page layouts. More importantly, you should be at the stage where you are able to use Google to add to your knowledge. This is the way that all developers, including the most battle hardened pros, do things.
