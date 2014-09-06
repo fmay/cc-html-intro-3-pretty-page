@@ -2,7 +2,7 @@
 title: A PRETTY SITE
 files: []
 editable: false
-layout: ""
+layout: 2-panels-tree
 
 ---
 #'Forking' this module
