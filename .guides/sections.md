@@ -78,9 +78,10 @@ We are using one file for each of the 3 pages. `index.html` and `classical.html`
 title: CSS Files
 files:
   - path: index.html
+    action: open
     panel: 0
-    ref: ""
-    lineCount: 0
+    ref: "<head>"
+    lineCount: 5
 editable: true
 layout: ""
 
@@ -106,7 +107,12 @@ If you look at the top of `index.html` (you'll see the same sort of thing in `cl
 ```
 ---
 title: The Video
-files: []
+files:
+  - path: index.html
+    action: open
+    panel: 0
+    ref: "<video src=\"https://codio.com/s/img/videos/jazz.mp4\" loop autoplay>"
+    lineCount: 1
 editable: false
 layout: ""
 
@@ -125,6 +131,7 @@ If you wanted to use YouTube, then you can get HTML 'embed' code that you can pa
 title: The Menu
 files:
   - path: css/main.css
+    action: open
     panel: 0
     ref: ""
     lineCount: 0
