@@ -1,96 +1,37 @@
----
-title: A PRETTY SITE
-files: []
-layout: 2-panels-tree
-
----
-# 'Forking' this module
-If you check the url address bar of your browser, if it starts with `https://codio.com/anon/....` then this means it is an anonymous project and any changes you make will be lost when you close down the browser tab. This will be the case if you access the module from the Codio Courses screen.
-
-To avoid losing changes, you can 'fork' the module into your own Codio account where it will appear in your projects list. To do this, select the **'Project->Fork'** menu item and choose a suitable name for the project.
-
-# A few words about the Codio Guide
-Before we start with this module here are a few pointers about using this Codio Guide.
-
-If you've already read this in another Guide then skip to the next section.
-
-![](.guides/img/guides-helper.jpg)
-
-# The File Tree
-The left most panel is the File Tree **(1)**. This is where your project's files are stored. You can open up files you see listed there by clicking on them.
-
-# About the Codio Guide
-The Codio Guide **(2)** is the content you are reading right now. It's worth knowing the following
-
-- if you ever close the Guide tab by mistake, simply open in from the View menu **(3)**.
-- you can expand and collapse the Guide's Table of Contents **(4)** with the Hamburger icon **(5)**
-- you move from one section of the Guide to the next using either the Table of Contents or the Navigation Buttons (6)
-
-# The Rocket Menu
-The Rocket menu **(7)** is a dropdown menu that lets you load code into your file tree when you click it as different sections might want to show different bits of code.
-
-You are usually encouraged to mess around with the live code. It is perfectly likely that you can wreck the code so pressing the Rocket menu button will restore the code again to its original state.
-
-# Previewing
-The Preview button **(8)** lets you run your web application. When you press it, it will open up a preview window so you can play with your app.
-
-# Code Tabs
-When you open some code from the file tree or the Codio Guide opens a file for you automatically, they will appear within a tab **(9)** in one of the panels. You can have several of these open at one time so you may need to click on the respective tab to get to see the file you want.
-
-
----
-title: A Pretty Site
-files: []
-layout: 2-panels-tree
-
----
+@annotation:tour intro
+#A Pretty Site
 This module builds on the materials we learnt in the 'My First Web Page' and 'More Advanced Layouts' modules.
 
 This is less of a teaching module and more a case of looking a pre-built site and seeing how it was built.
 
-![](.guides/img/site-ss.jpg)
+![](.guides/an-img/site-ss.jpg)
 
 There are many different ways that this site could have been built and this example is one approach.
----
-title: Overview of the site
-files: []
-layout: ""
 
----
+@annotation:tour overview
+#Overview of the site
 The site consists of 3 pages
 
 - Jazz : this is the main `index.html` page
 - Classical : this is `classical.html` and the header section is built to completion but the tiles underneath have the same tiles as the Jazz page, so feel free to put in classical tiles
 - Rock : this page has not actually been built yet and is one you can add yourself by adding a `rock.html` page
----
-title: HTML Files
-files: []
-layout: ""
 
----
+@annotation:tour HTMLfiles
+##HTML Files
 We are using one file for each of the 3 pages. `index.html` and `classical.html` are already there and you can feel free to add a `rock.html` files and build the missing page.
 
----
-title: CSS Files
-files:
-  - path: index.html
-    action: open
-    panel: 0
-    ref: "<head>"
-    lineCount: 5
-layout: ""
-
----
+@annotation:tour CSSFiles
+##CSS Files
 You will see that there is a folder called `css` in your filetree. For this project we decided to use more than one CSS file. We could have slapped everything into `main.css` but this makes for a large file that is tedious to scroll through.
 
 We opted to do the following for this project :
 
 - `main.css` should contain styling that is common to all pages
 - `jazz.css` contains styling specific just to the Jazz page (the tiles)
-- `classical.css` contains styling for the Classical tiles
+- `'classical.css` contains styling for th Classical tiles
 - `rock.css` well, this doesn't exist yet but you can go ahead and create it and link it into your new `rock.html` page.rock
 
-## Linking the CSS pages
+##Linking the CSS pages
 If you look at the top of `index.html` (you'll see the same sort of thing in `clasical.html`) you can see how we manage the linking of each CSS stylesheet
 
 ```
@@ -100,17 +41,9 @@ If you look at the top of `index.html` (you'll see the same sort of thing in `cl
   <link rel="stylesheet" type="text/css" href="/css/jazz.css">   
 </head>
 ```
----
-title: The Video
-files:
-  - path: index.html
-    action: open
-    panel: 0
-    ref: "<video src=\"https://codio.com/s/img/videos/jazz.mp4\" loop autoplay>"
-    lineCount: 1
-layout: ""
 
----
+@annotation:tour video
+#The Video
 Setting up the video is actually really easy. We have used an mp4 video file that lives on a Codio server. You have better control over these compared to YouTube. 
 
 If you [check this article out](https://developer.mozilla.org/en/docs/Web/HTML/Element/video) you can see how you can add player controls and many more things. 
@@ -121,18 +54,9 @@ If you wanted to use YouTube, then you can get HTML 'embed' code that you can pa
 <video src="https://codio.com/s/img/videos/jazz.mp4" loop autoplay>
 ```
 
----
-title: The Menu
-files:
-  - path: css/main.css
-    action: open
-    panel: 0
-    ref: ""
-    lineCount: 0
-layout: ""
-
----
-We have created a nice and simple menu using `<li>` elements with some clever styling.
+@annotation:tour menu
+#The Menu
+We have created a nice and simple menu using <li> elements with some clever styling.
 
 This is the HTML
 
@@ -147,7 +71,7 @@ This is the HTML
 </nav>
 ```
 
-The `<ul>` and `<li>` elements are often used for things like bullet point lists, but we have used CSS to completely change the way that it is displayed.
+The <ul> and <li> elements are often used for things like bullet point lists, but we have used CSS to completely change the way that it is displayed.
 
 This is probably the most complicated thing in this page but it is worth understanding. If you can master this, you are well on the way to becoming a CSS expert.
 
@@ -161,7 +85,7 @@ ul {
 }
 ```
 
-This tells the entire list to behave as an inline block and to be vertically aligned in the middle with respect to its parent container (the `<nav>` block).
+This tells the entire list to behave as an inline block and to be vertically aligned in the middle with respect to its parent container (the <nav> block).
 
 `list-style-type: none` means that bullet points (the default) are suppressed. 
 
@@ -193,11 +117,11 @@ li a, li a:visited {
 }
 ```
 
-This is perhaps the toughest part to explain. `li a` addresses how to style the `<a>` tag within an `<li>` element. This means how the link itself should appear. The `li a:visited` selector styles links that have already been clicked on/visited (we don't want them to appear in the default blue). `text-decoration: none` means that links and visited links should not be underlined (which is the default behavior for links).
+This is perhaps the toughest part to explain. `li a` addresses how to style the <a> tag within an <li> element. This means how the link itself should appear. The `li a:visited` selector styles links that have already been clicked on/visited (we don't want them to appear in the default blue). `text-decoration: none` means that links and visisted links should not be underlined (which is the default behavior for links).
 
 Now the challenging bit is to explain why we are using `display: block` and `width:100%` and `height:100%`. The reason for this is that we do not want only the text to be a link that changes the mouse cursor when you hover over it, but we want the entire area around it to be clickable as well.
 
-`display: block` tells the browser to treat it as a block element rather than an inline element. Setting the width and height to 100% sets the element to be the full size of its parent container (the `<li>` element). We have to fiddle around with the padding in order to get it to appear just right.
+`display: block` tells the browser to treat it as a block element rather than an inline element. Setting the width and height to 100% sets the element to be the full size of its parent container (the <li> element). We have to fiddle around with the padding in order to get it to appear just right.display
 
 It is important you play with these value and preview in order to see just what effect each property has on the output, so go play!
 
@@ -227,16 +151,12 @@ If you look at the Jazz and Tonight menu items, you can see that they actually r
 
 Text has a different styling when a) displayed b) linked and c) linked and the user has visited that link before. 
 
-Even thought we styled the Tonight menu with `color: #fff;` (white), the menu item has a link on it and so the `li a` and `li a:visited` selectors override things, meaning it will get the same light gray color.
+Even thought we styled the Tonight menu with `color: #fff;` (white), the menu item has a link on it and so the `li a` and `li a:visited` selectors overide things, meaning it will get the same light gray color.
 
 We need this text to be white, to we have to specifically set the `li a` and `li a:visited` properties .
 
----
-title: Title text above the tiles
-files: []
-layout: ""
-
----
+@annotation:tour titletext
+#Title text above the tiles
 The styling of these is pretty self explanatory.
 
 ```
@@ -254,7 +174,7 @@ The styling of these is pretty self explanatory.
 }
 ```
 
-One thing that is worth expanding on is the way that we get this text to center properly. The way we have done this is to tell the parent container `<content>` that all text within it should be centered.
+One thing that is worth expanding on is the way that we get this text to center properly. The way we have done this is to tell the parent container <content> that all text within it should be centered.
 
 ```
 #content {
@@ -266,14 +186,11 @@ One thing that is worth expanding on is the way that we get this text to center 
 
 One thing to note about `text-align: center` is that because styles *cascade* to child elements, all the text in the musician tiles would also be centered. We will deal with this by specifically setting the alignment back to left for these tiles, as we discuss in the next section.
 
-Note that the `margin: auto` property tells the browser that the `<content>` container (which we have set to be 950px wide) should be centered with respect to its parent (which is the page).
----
-title: Musician Tiles
-files: []
-layout: ""
+Note that the `margin: auto` property tells the browser that the <content> container (which we have set to be 950px wide) should be centered with respect to its parent (which is the page).
 
----
-The individual tiles are actually styled within their respective css files (`jazz.css` etc.) but there are things that are common to each and every tile on all pages. 
+@annotation:tour tiles
+#Musician Tiles
+The individual tiles are actually styled within their respective css files (`jazz.css` etc.) but there are things that are common to each and every tile is all pages. 
 
 For example, the musician name and the subtext is the same. So rather than duplicate this in all individual css files, we put the styling for these in `main.css`. It's much neater that way.
 
@@ -304,11 +221,11 @@ Our HTML contains class references to the above selectors
 </div>
 ```
 
-You can see how the `<h1>` and `<p>` tags have these class references in them.
+You can see how the <h1> and <p> tags have these class references in them.
 
-The actual styling is pretty self-explanatory. Note how the `text-transform: uppercase` converts the original text into upper case for us.
+The actual styling is pretty self-explanatory. Note how the `text-transform: uppercase' converts the original text into upper case for us.
 
-## Tile Rows
+##Tile Rows
 We also can centrally style some of the block level properties of our tiles. 
 
 ```
@@ -335,19 +252,12 @@ div.tile a {
 }
 ```
 
-The above styling is also very interesting. It is doing the exact same thing as we did with the menu items. We don't want only the text to be clickable, we want the *entire parent container* (the `<div>`) to be clickable.
+The above styling is also very interesting. It is doing the exact same thing as we did with the menu items. We don't want only the text to be clickable, we want the *entire parent container* (the <div> to be clickable).
 
-It is the combination of `display: block`, `width:100%` and `height: 100%` that does this. It tells the browser to treat the `<a>` tag (from `div.tile a`) like a block. Setting the width and height to 100% means the block will fill the parent (the `<div>`).
----
-title: Individual Tiles
-files:
-  - path: css/jazz.css
-    panel: 0
-    ref: ""
-    lineCount: 0
-layout: 2-panels-tree
+It is the combination of `display: block`, `width:100%` and `height: 100%` that does this. It tells the browser to treat the <a> tag (from `div.tile a`) like a block. Setting the width and height to 100% means the block will fill the parent (the <div>).
 
----
+@annotation:tour rowcol
+#Individual Tiles
 Finally, we have styled each individual tile so each one can have a unique size and appearance.
 
 Note that we have a separate CSS file for each music genre in the css folder in our filetree.
@@ -373,19 +283,22 @@ The HTML and CSS look like this
 }
 ```
 
-Because each tile we want to style uniquely, we use an id, so `id='r2c2'`.
+Because each tile we want to style uniquely, we use and id, so `id='r2c2'`.
 
-The styling options are self-explanatory by now. Remember that the `<h1>` and `<p>` tags are styled in `main.css` as these are common to all tiles on all pages.
+The styling options are self-explanatory by now. Remember that the <h1> and <p> tags are styled in `main.css` as these are common to all tiles on all pages.
 
----
-title: Summing Up
-files: []
-editable: false
-layout: ""
+@annotation:tour summary
+#Summing Up
+A usual, the name of the game is experimentation. You should mess around with code freely. If you mess things up, select 'Restore' from the Rocket menu at the top.
 
----
-A usual, the name of the game is experimentation. You should mess around with code freely. If you mess things up, select 'Restore' from the ![](.guides/img/rocket.png) Rocket menu at the top.
 
-You should now be in a position to create strong page layouts. More importantly, you should be at the stage where you are able to use Google to add to your knowledge. This is the way that all developers, including the most battle hardened pros, do things.
 
-It's now time to find out about Javascript in the next course!
+
+
+
+
+
+
+
+
+
